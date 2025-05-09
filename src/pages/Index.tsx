@@ -111,7 +111,7 @@ const Index = () => {
       <section className="relative py-24 px-4">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-display text-white mb-6 glow-text">
-            A Tribute to All You
+            A Tribute to You
           </h2>
           
           <p className="text-white/80 mb-12 leading-relaxed">
