@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -35,19 +38,12 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -97,5 +93,76 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Raleway', sans-serif;
+  }
+}
+
+@layer components {
+  .universe-container {
+    @apply w-full h-screen overflow-hidden relative bg-gradient-to-r from-[#000428] to-[#004e92];
+  }
+  
+  .glow-text {
+    @apply animate-text-glow;
+    text-shadow: 0 0 15px rgba(255,255,255,0.5), 0 0 30px rgba(255,255,255,0.3);
+  }
+  
+  .hologram-text {
+    @apply relative isolate overflow-hidden before:absolute before:inset-0;
+  }
+  
+  .hologram-text:before {
+    content: '';
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0) 100%);
+    animation: shimmer 3s infinite;
+    top: 0;
+    left: -150%;
+    width: 150%;
+    height: 100%;
+    transform: skewX(-25deg);
+  }
+  
+  .emotion-particle {
+    @apply absolute pointer-events-none animate-particle-float;
+  }
+  
+  .mother-title {
+    @apply font-hindi text-5xl md:text-7xl lg:text-8xl font-bold relative;
+    background: linear-gradient(90deg, #ffecd2 0%, #fcb69f 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .journey-card {
+    @apply rounded-xl overflow-hidden relative backdrop-blur-md bg-white/10 border border-white/20 shadow-xl transition-all duration-300;
+  }
+  
+  .journey-card:hover {
+    @apply transform scale-105 shadow-2xl bg-white/20;
+  }
+  
+  .glow-effect {
+    @apply absolute inset-0 opacity-0 transition-opacity duration-300 pointer-events-none;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 70%);
+  }
+  
+  .journey-card:hover .glow-effect {
+    @apply opacity-30;
+  }
+  
+  .poetry-text {
+    @apply font-display relative z-10;
+  }
+  
+  .interactive-element {
+    @apply transition-all duration-300 cursor-pointer hover:scale-105;
+  }
+  
+  .glassmorphism {
+    @apply backdrop-blur-lg bg-white/10 border border-white/20 shadow-lg;
+  }
+  
+  .glassmorphism-dark {
+    @apply backdrop-blur-lg bg-black/30 border border-white/10 shadow-lg;
   }
 }
