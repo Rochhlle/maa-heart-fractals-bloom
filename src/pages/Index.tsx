@@ -111,12 +111,12 @@ const Index = () => {
       <section className="relative py-24 px-4">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-display text-white mb-6 glow-text">
-            A Tribute to All Mothers
+            A Tribute to All You
           </h2>
           
           <p className="text-white/80 mb-12 leading-relaxed">
             This experience is dedicated to the love, sacrifice, and unwavering support 
-            that mothers provide throughout our lives. Their love is the foundation upon 
+            that you provide throughout our lives. Your love is the foundation upon 
             which we build our journey.
           </p>
           
