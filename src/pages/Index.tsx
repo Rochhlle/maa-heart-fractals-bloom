@@ -5,6 +5,7 @@ import HolographicPoetry from '@/components/HolographicPoetry';
 import JourneyTimeline from '@/components/JourneyTimeline';
 import EmotionSelector from '@/components/EmotionSelector';
 import EmotionParticles from '@/components/EmotionParticles';
+import PersonalLetter from '@/components/PersonalLetter';
 
 const Index = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -99,6 +100,13 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Personal Letter Section */}
+      <section className="relative py-16 px-4">
+        <div className="max-w-4xl mx-auto">
+          <PersonalLetter />
+        </div>
+      </section>
+      
       {/* Final Message Section */}
       <section className="relative py-24 px-4">
         <div className="max-w-2xl mx-auto text-center">
