@@ -110,7 +110,7 @@ const Index = () => {
       <section className="relative py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-hindi text-white mb-8 text-center glow-text">
-            यादों की डोरी
+            स्मृतियाँ
           </h2>
           <MemoryTimeline />
         </div>
@@ -164,7 +164,7 @@ const Index = () => {
           
           <div className="inline-block animate-float">
             <HandwritingText className="text-3xl font-hindi text-yellow-300">
-              मैं बोलता नहीं, पर जो करता हूँ, सब आपके लिए करता हूँ… और ये मेरा वादा है
+              आपसे मिली हर सीख के लिए धन्यवाद
             </HandwritingText>
           </div>
         </div>
