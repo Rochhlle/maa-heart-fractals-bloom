@@ -9,6 +9,7 @@ import PersonalLetter from '@/components/PersonalLetter';
 import FractalHeart from '@/components/FractalHeart';
 import HandwritingText from '@/components/HandwritingText';
 import MemoryTimeline from '@/components/MemoryTimeline';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
 
 const Index = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -112,16 +113,44 @@ const Index = () => {
           <h2 className="text-3xl font-hindi text-white mb-8 text-center glow-text">
             स्मृतियाँ
           </h2>
+          
+          {/* First Image - Traditional Family */}
+          <div className="mb-12 max-w-2xl mx-auto glassmorphism rounded-xl overflow-hidden shadow-2xl transform hover:scale-102 transition-transform duration-500">
+            <AspectRatio ratio={16/9} className="bg-black relative">
+              <img 
+                src="/lovable-uploads/f6b2edc3-ec55-4aa9-b861-8ec708906ab9.png" 
+                alt="माँ और बेटा दीपावली में"
+                className="object-cover w-full h-full mix-blend-luminosity opacity-90 hover:opacity-100 hover:mix-blend-normal transition-all duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+              <p className="absolute bottom-4 left-4 text-white/90 font-hindi text-lg">त्योहारों की रोशनी में माँ का प्यार</p>
+            </AspectRatio>
+          </div>
+          
           <MemoryTimeline />
         </div>
       </section>
       
-      {/* Journey Timeline Section */}
+      {/* Journey Timeline Section with Family Image */}
       <section className="relative py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-hindi text-white mb-8 text-center glow-text">
             मातृत्व की यात्रा
           </h2>
+          
+          {/* Second Image - Modern Family */}
+          <div className="mb-12 max-w-2xl mx-auto glassmorphism rounded-xl overflow-hidden shadow-2xl transform hover:scale-102 transition-transform duration-500">
+            <AspectRatio ratio={16/9} className="bg-black relative">
+              <img 
+                src="/lovable-uploads/d992a278-4847-4a04-b188-1d1e95a6d46d.png" 
+                alt="परिवार का प्यार"
+                className="object-cover w-full h-full mix-blend-luminosity opacity-90 hover:opacity-100 hover:mix-blend-normal transition-all duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+              <p className="absolute bottom-4 left-4 text-white/90 font-hindi text-lg">नया जीवन, नई शुरुआत</p>
+            </AspectRatio>
+          </div>
+          
           <JourneyTimeline />
         </div>
       </section>
