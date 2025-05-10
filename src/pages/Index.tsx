@@ -111,25 +111,6 @@ const Index = () => {
       <section className="relative py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-hindi text-white mb-8 text-center glow-text">
-            स्मृतियाँ
-          </h2>
-          
-          {/* First Image - Traditional Family */}
-          <div className="mb-12 max-w-2xl mx-auto glassmorphism rounded-xl overflow-hidden shadow-2xl transform hover:scale-102 transition-transform duration-500">
-            <AspectRatio ratio={16/9} className="bg-black relative">
-              <img 
-                src="/lovable-uploads/f6b2edc3-ec55-4aa9-b861-8ec708906ab9.png" 
-                alt="माँ और बेटा दीपावली में"
-                className="object-cover w-full h-full mix-blend-luminosity opacity-90 hover:opacity-100 hover:mix-blend-normal transition-all duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-              <p className="absolute bottom-4 left-4 text-white/90 font-hindi text-lg">त्योहारों की रोशनी में माँ का प्यार</p>
-            </AspectRatio>
-          </div>
-          
-          <MemoryTimeline />
-        </div>
-      </section>
       
       {/* Journey Timeline Section with Family Image */}
       <section className="relative py-16 px-4">
@@ -193,7 +174,7 @@ const Index = () => {
           
           <div className="inline-block animate-float">
             <HandwritingText className="text-3xl font-hindi text-yellow-300">
-              आपसे मिली हर सीख के लिए धन्यवाद
+              
             </HandwritingText>
           </div>
         </div>
