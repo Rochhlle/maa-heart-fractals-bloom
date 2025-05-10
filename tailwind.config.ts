@@ -22,7 +22,8 @@ export default {
 			fontFamily: {
 				sans: ['Raleway', 'sans-serif'],
 				display: ['Playfair Display', 'serif'],
-				hindi: ['Poppins', 'sans-serif'],
+				hindi: ['Baloo 2', 'Hind', 'Poppins', 'sans-serif'],
+				calligraphy: ['Kavivanar', 'cursive']
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -182,6 +183,30 @@ export default {
 					'0%': { transform: 'rotate(0deg)' },
 					'100%': { transform: 'rotate(360deg)' },
 				},
+				'handwriting': {
+					'0%': { 
+						opacity: '0',
+						transform: 'translateY(5px)'
+					},
+					'30%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'fade-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(10px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
@@ -193,6 +218,8 @@ export default {
 				'grow-fade': 'grow-fade 0.5s ease-out forwards',
 				'particle-float': 'particle-float 3s ease-out forwards',
 				'rotate-slow': 'rotate-slow 20s linear infinite',
+				'handwriting': 'handwriting 1s ease-out forwards',
+				'fade-in': 'fade-in 0.5s ease-out',
 			},
 			backgroundImage: {
 				'love-gradient': 'linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%)',

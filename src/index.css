@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&family=Hind:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&family=Hind:wght@400;500;700&family=Baloo+2:wght@400;500;600;700&family=Kavivanar&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -141,6 +141,10 @@
     @apply transform scale-105 shadow-2xl bg-white/20;
   }
   
+  .memory-card {
+    @apply relative overflow-hidden transition-transform duration-500 hover:shadow-lg;
+  }
+  
   .glow-effect {
     @apply absolute inset-0 opacity-0 transition-opacity duration-300 pointer-events-none;
     background: radial-gradient(circle at center, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 70%);
@@ -167,89 +171,110 @@
   }
   
   .font-hindi {
-    font-family: 'Hind', sans-serif;
+    font-family: 'Baloo 2', 'Hind', sans-serif;
     line-height: 1.6;
   }
-  
-  @keyframes shimmer {
-    0% {
-      left: -150%;
-    }
-    100% {
-      left: 150%;
-    }
+}
+
+@keyframes shimmer {
+  0% {
+    left: -150%;
   }
-  
-  @keyframes particle-float {
-    0%, 100% {
-      transform: translateY(0px) translateX(0px);
-    }
-    25% {
-      transform: translateY(-15px) translateX(15px);
-    }
-    50% {
-      transform: translateY(-25px) translateX(-15px);
-    }
-    75% {
-      transform: translateY(-10px) translateX(10px);
-    }
+  100% {
+    left: 150%;
   }
-  
-  @keyframes pulse-glow {
-    0%, 100% {
-      opacity: 0.5;
-      transform: scale(1);
-    }
-    50% {
-      opacity: 0.8;
-      transform: scale(1.05);
-    }
+}
+
+@keyframes particle-float {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px);
   }
-  
-  .animate-pulse-glow {
-    animation: pulse-glow 2s infinite;
+  25% {
+    transform: translateY(-15px) translateX(15px);
   }
-  
-  .animate-text-glow {
-    animation: text-glow 2s infinite;
+  50% {
+    transform: translateY(-25px) translateX(-15px);
   }
-  
-  @keyframes text-glow {
-    0%, 100% {
-      text-shadow: 0 0 15px rgba(255,255,255,0.3), 0 0 30px rgba(255,255,255,0.2);
-    }
-    50% {
-      text-shadow: 0 0 25px rgba(255,255,255,0.5), 0 0 50px rgba(255,255,255,0.4);
-    }
+  75% {
+    transform: translateY(-10px) translateX(10px);
   }
-  
-  .animate-float {
-    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
   }
-  
-  @keyframes float {
-    0%, 100% {
-      transform: translateY(0px);
-    }
-    50% {
-      transform: translateY(-20px);
-    }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
   }
-  
-  .animate-grow-fade {
-    animation: grow-fade 1.5s ease-out forwards;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s infinite;
+}
+
+.animate-text-glow {
+  animation: text-glow 2s infinite;
+}
+
+@keyframes text-glow {
+  0%, 100% {
+    text-shadow: 0 0 15px rgba(255,255,255,0.3), 0 0 30px rgba(255,255,255,0.2);
+  }
+  50% {
+    text-shadow: 0 0 25px rgba(255,255,255,0.5), 0 0 50px rgba(255,255,255,0.4);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-grow-fade {
+  animation: grow-fade 1.5s ease-out forwards;
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+@keyframes grow-fade {
+  0% {
     opacity: 0;
     transform: scale(0.9);
   }
-  
-  @keyframes grow-fade {
-    0% {
-      opacity: 0;
-      transform: scale(0.9);
-    }
-    100% {
-      opacity: 1;
-      transform: scale(1);
-    }
+  100% {
+    opacity: 1;
+    transform: scale(1);
   }
+}
+
+@keyframes handwriting {
+  0% {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  30% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-handwriting {
+  animation-name: handwriting;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
 }
